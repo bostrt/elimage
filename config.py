@@ -1,5 +1,7 @@
-DEBUG = True
-DEFAULT_DATA_DIR = '/tmp'
+import os
+
+DEBUG = os.getenv('DEBUG', False)
+DEFAULT_DATA_DIR = os.getenv('ELIMAGE_DATA_DIR','/tmp')
 DEFAULT_PORT = 8888
 DB = 'elimage.db'
 
